@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Age cal practice</title>
+    <style>
+        .minor{
+            color: orange;
+            font-weight: 900;
+        }
+        .adult{
+            color: green;
+            font-weight: 900;
+        }
+        .adults{
+            color: rgb(242, 85, 0);
+            font-weight: 900;
+        }
+        
+        #result{
+            color: red;
+            font-weight: 500;
+            font-family:Arial, Helvetica, sans-serif;
+            color: aliceblue;
+        }
+    </style>
+</head>
+<body>
+    <input id="input" type="number" placeholder="Enter a number...">
+    <button id="btn">Check</button>
+    <p id="result"></p>
+    <script>
+        let input = document.querySelector("#input"),
+            btn = document.querySelector("#btn"),
+            result = document.querySelector("#result");
+
+
+    let check = () =>{ 
+                        let inputValue = input.value;
+                        
+                        if (inputValue === "") {
+                            result.innerHTML = "Input a Value";
+                        }else if (inputValue <= 17 ){
+                            let newTag = document.createElement("p");
+                                newTag.classList = "minor";
+                                newTag.textContent = "You are a Minor | Wait for Adulthood";
+                                document.body.appendChild(newTag);
+                        }else if (inputValue <=  30 ){
+                            let newTag = document.createElement("p");
+                                newTag.classList = "adult";
+                                newTag.textContent = "You are an Adult | Qualified!";
+                                document.body.appendChild(newTag);                           
+                        }else{
+
+
+                                let newTag = document.createElement("p");
+                                newTag.classList = "adults";
+                                newTag.textContent = "You are an Adult | Not Qualified! | Older than required";
+                                document.body.appendChild(newTag); 
+                        
+                          
+                        }
+
+                        input.value = "";
+
+                    }
+        btn.addEventListener("click", check);
+
+        setInterval(() => {
+console.log("jeje1");
+        
+}, 1000);
+
+
+    //     function check() {
+
+    //     let inputValue = input.value;
+       
+    //     switch (inputValue) {
+    //         case "":
+    //               result.innerHTML = "Input a Value";
+
+    //             break;
+    //         case "1":
+    //         case "5":              
+    //         case "10":              
+    //         case "17":              
+                    
+    //         let newTag = document.createElement("P");
+    //                 newTag.classList = "minor";
+    //                 newTag.textContent = "You are a Minor | Wait for Adulthood";
+    //                 document.body.appendChild(newTag);
+                               
+        
+    //         default:
+    //             break;
+    //     }
+    // }
+
+  
+    </script>
+</body>
+</html>

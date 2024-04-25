@@ -1,0 +1,155 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Age checker</title>
+    <style>
+        *{
+            font-family: 'Times New Roman', Times, serif;
+        }
+        #result{
+            background: red;
+                       
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <input id="input" type="number" placeholder="Input your Real Age" >
+        <p id="result"></p>
+        <button onclick="btn()">Check</button>
+    </div>  
+
+   <script>
+
+
+     function btn(){
+
+        
+    var age = document.getElementById("input");
+    var ages = age.value;
+    var results = document.getElementById("result");
+    
+
+                 
+         if(ages === ""){
+
+        console.log("Enter a Your Age");        
+
+         }else if(ages <=17 ){
+             console.log("You'er a Minor");
+
+         }else  {
+
+        result.innerHTML = "you'er an Adult"  + ages;
+        result.style.color = "green";
+         }
+         age.value = "";
+        } 
+
+    
+
+    // const person = {
+    //     firstName: "Prestigious",
+    //     lastName: "Technology",
+    //     age:52
+    // }
+    
+    // let {firstName, lastName, age = 18} = person;
+
+    // console.log("The best Tech Hub is : " + firstName + " "+ lastName);
+
+    // function greet(firstname, lastname) {
+    //     console.log("HELLO " + firstname + " " +lastname);
+    // }
+
+    // greet("Abraham ", "Olatunji")
+
+
+// function greet() {
+//     console.log("Hello, Prestigious Technology");
+// }
+// greet();
+
+
+    // Ternary  operator
+
+    // let age = 17;
+    
+    // let msg = (age >= 18) ? "you are an adult" : "you are a minor" ;
+
+    // console.log(msg);
+
+    // let dayname = 4;
+
+    // switch (dayname) {
+    //     case 1:
+    //         dayname= "Monday";
+            
+    //         break;
+
+    //         case 2:
+    //         dayname= "Tuesday";
+            
+    //         break; case 3:
+    //         dayname= "Wensday";
+            
+    //         break; case 4:
+    //         dayname= "Thursday";
+            
+    //         break;
+    
+    //     default:
+    //         dayname = "Invalid";
+    //         break;
+    // }
+
+    // console.log("Today is : " + dayname);
+
+    // for loop
+
+    // for( let i = 1; i <= 10; i++){
+    //     console.log(i);
+
+    //     for(let j = 1; j <= 2; j++){
+    //         console.log("I am Learning " + j);
+    //     }
+    // }
+    // while loop
+
+        // let i = 10;
+        // while(i => 3){
+        //     console.log(i);
+        //     i++
+        // }
+
+        // Do while loop
+        // let i = 10;
+
+        // do{
+        //     console.log(i);
+        //     i++;
+
+        // }while(i <= 10)
+
+        // let age = 19;
+
+        // if(age > 18){
+        //     console.log("You are an adult");
+        // }
+
+        // else if (age >= 16){
+        //     console.log("You are a teenager");
+        // }
+        // else{
+        //     console.log(" You are a minor ");
+        // }
+
+        
+  </script>
+
+ </body>
+</html>

@@ -1,0 +1,95 @@
+
+*{
+    font-family: sans-serif;
+}
+.container{
+    height: 900px;
+    width: 100%;
+    /* background-color: black; */
+}
+
+.nav-bar{
+    position: fixed;
+    background-color: rgb(42, 11, 99);
+    padding: 40px;
+    width: 100%;
+    height: 25px;
+    margin: -10px;
+
+}
+
+.nav{
+
+    text-decoration: none;
+    font-family: sans-serif;
+    color: white;
+    font-size: 20px;
+    margin-top: 8px;
+}
+.nav:hover{
+    /* background: green; */
+   color: red;
+    /* padding: 1rem; */
+    /* border-radius: 1rem; */
+}
+
+/* .donate  :hover{
+    background-color: white;
+    color: blue;
+} */
+
+.donate{
+    height:30px;
+    width: 100px;
+    background-color:green;
+    padding: 5px;
+    border: none;
+    border-radius: 7px;
+    color: white;
+    font-family: sans-serif;
+    font-weight: bolder;
+    font-size: 15px;
+    cursor: pointer;
+    
+    
+}
+
+.member{
+    height:30px;
+    width: 150px;
+    background-color: transparent;
+    padding: 5px ;
+    border-radius: 7px;
+    border:1px solid white;
+    color: white;
+    font-weight: bolder;
+    font-size: 15px;
+    cursor: pointer;
+
+}
+
+
+img{
+    width: 1351px;
+    height: 600px;
+    margin: -10px ;
+    margin-right: -19px;
+}
+
+.description{
+
+    margin-top:15px;
+    margin-bottom: 5px;
+    height: 200px;
+    width: 1350px;
+    margin-left: -10px;
+    background-color: transparent;
+    border: 2px solid rgb(158, 158, 158);
+    
+}
+
+.footer-nav a{
+    text-decoration: none;
+    /* cursor: pointer; */
+    
+}

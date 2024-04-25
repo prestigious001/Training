@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>fill in the form</title>
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            font-family: sans-serif
+            /* background: blueviolet; */
+        }
+        body{
+            background: rgb(64, 64, 97);
+            /* padding: 0px; */
+        }
+        .input-box{
+            width: 300px;
+            align-items: center;
+            justify-content: center;
+            padding: 10%;
+            background: rgb(92, 70, 70);
+            margin: 20px;
+            border-top-left-radius: 20px;
+            border-bottom-right-radius:20px ;
+        
+        }
+        .input-box input{
+            border: none;
+            margin: 10px;
+            padding: 20px;
+            font-size: 15px;
+            background: transparent;
+            outline:0 ;
+            color: #fff;
+        }
+        h3{
+            color: wheat;
+        }
+        
+        button{
+            padding: 10px;
+            font-size: 20px;
+            width: 100%;
+            background: green;
+            color: white;
+            border: 0;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        
+        .input-box img{
+            cursor: pointer;
+            width:30px;
+            /* height: 30px; */
+            margin-bottom: -20px;
+        }
+        p strong{
+            color: wheat;
+        }
+        strong{
+            color: white;
+        }
+        
+    </style>
+</head>
+<body>  
+   <div class="container">
+
+        <form action="" method="post">
+
+            <div class="input-box">
+               <h3>Fill in the following Correcly </h3> 
+
+                <input type="text" placeholder="First name" required><hr>
+                <input type="text" placeholder="Last name" required><hr>
+                <input type="text" placeholder="Generate Password" id="password" readonly required>
+                <img onclick="createPassword()" src="generate.png" alt="">
+                <hr><br>
+                <p><strong>Gender :</strong></p>
+                <input type="radio" name="gender"> <strong>Male</strong>
+                <input type="radio" name="gender">  <strong>Female</strong>
+                    <br><br>
+                <button type="submit">Submit</button>
+    
+            </div>
+           
+        </form>
+
+   </div> 
+
+   
+   <script>
+
+    const passwordBox = document.getElementById("password");
+    const length = 20;
+
+    const upperCase = "ABCDEFGHIJKLIOPQRSTUVWXYZ";
+    const lowerCase = "abcdefghijklmnopqrstuvwxyz";
+    const numbers = "1234567890";
+    const symbols = "!@#$%^&*()_+-';:,.</?";
+    const allChars = upperCase + lowerCase + numbers + symbols;
+
+    function createPassword(){
+        let password = "";
+
+        password += upperCase[Math.floor(Math.random() * upperCase.length)];
+        password += lowerCase[Math.floor(Math.random() * lowerCase.length)];
+        password += numbers[Math.floor(Math.random() * numbers.length)];
+        password += symbols[Math.floor(Math.random() * symbols.length)];
+
+        while(length > password.length){
+            password += allChars[Math.floor(Math.random() * allChars.length)];
+        }
+
+        passwordBox.value = password;
+    }
+
+</script>
+</body>
+</html>
